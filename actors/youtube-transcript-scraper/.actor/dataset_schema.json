@@ -1,0 +1,63 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Transcripts",
+            "transformation": {
+                "fields": [
+                    "thumbnail_url",
+                    "video_id",
+                    "title",
+                    "language",
+                    "is_auto_generated",
+                    "segment_count",
+                    "word_count",
+                    "available_languages",
+                    "text"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "thumbnail_url": {
+                        "label": "Thumbnail",
+                        "format": "image"
+                    },
+                    "video_id": {
+                        "label": "Video ID",
+                        "format": "text"
+                    },
+                    "title": {
+                        "label": "Title",
+                        "format": "text"
+                    },
+                    "language": {
+                        "label": "Language",
+                        "format": "text"
+                    },
+                    "is_auto_generated": {
+                        "label": "Auto captions",
+                        "format": "boolean"
+                    },
+                    "segment_count": {
+                        "label": "Segments",
+                        "format": "number"
+                    },
+                    "word_count": {
+                        "label": "Words",
+                        "format": "number"
+                    },
+                    "available_languages": {
+                        "label": "Available languages",
+                        "format": "array"
+                    },
+                    "text": {
+                        "label": "Transcript",
+                        "format": "text"
+                    }
+                }
+            }
+        }
+    }
+}

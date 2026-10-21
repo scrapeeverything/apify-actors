@@ -1,0 +1,73 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Profiles",
+            "transformation": {
+                "fields": [
+                    "profile_pic_url",
+                    "username",
+                    "full_name",
+                    "is_verified",
+                    "follower_count",
+                    "following_count",
+                    "post_count",
+                    "engagement_rate_pct",
+                    "category_name",
+                    "external_url",
+                    "biography"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "profile_pic_url": {
+                        "label": "Avatar",
+                        "format": "image"
+                    },
+                    "username": {
+                        "label": "Username",
+                        "format": "text"
+                    },
+                    "full_name": {
+                        "label": "Name",
+                        "format": "text"
+                    },
+                    "is_verified": {
+                        "label": "Verified",
+                        "format": "boolean"
+                    },
+                    "follower_count": {
+                        "label": "Followers",
+                        "format": "number"
+                    },
+                    "following_count": {
+                        "label": "Following",
+                        "format": "number"
+                    },
+                    "post_count": {
+                        "label": "Posts",
+                        "format": "number"
+                    },
+                    "engagement_rate_pct": {
+                        "label": "Engagement %",
+                        "format": "number"
+                    },
+                    "category_name": {
+                        "label": "Category",
+                        "format": "text"
+                    },
+                    "external_url": {
+                        "label": "Website",
+                        "format": "link"
+                    },
+                    "biography": {
+                        "label": "Bio",
+                        "format": "text"
+                    }
+                }
+            }
+        }
+    }
+}

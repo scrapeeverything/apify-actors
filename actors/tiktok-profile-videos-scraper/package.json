@@ -1,0 +1,20 @@
+{
+    "name": "tiktok-profile-videos-scraper",
+    "version": "0.1.0",
+    "description": "Scrape public TikTok profiles (followers, likes, video count, bio, region) and their newest videos with play counts. Nested or one row per video. Powered by the Scrape Everything API.",
+    "type": "module",
+    "private": true,
+    "license": "MIT",
+    "main": "src/main.js",
+    "engines": {
+        "node": ">=20"
+    },
+    "scripts": {
+        "start": "node src/main.js",
+        "test": "node --test test/"
+    },
+    "dependencies": {
+        "apify": "^3.7.2",
+        "scrapeeverything-apify-actors": "file:../.."
+    }
+}

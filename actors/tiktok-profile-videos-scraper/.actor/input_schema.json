@@ -1,0 +1,65 @@
+{
+    "title": "TikTok Profile & Videos Scraper input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "usernames": {
+            "title": "TikTok usernames or profile URLs",
+            "type": "array",
+            "editor": "stringList",
+            "description": "One per line. Accepts khaby.lame, @khaby.lame or https://www.tiktok.com/@khaby.lame.",
+            "prefill": [
+                "khaby.lame"
+            ]
+        },
+        "includeVideos": {
+            "title": "Include newest videos",
+            "type": "boolean",
+            "description": "Also fetch the newest videos with play counts (tiktok.posts, +1 credit per profile).",
+            "default": true
+        },
+        "videosLimit": {
+            "title": "Videos per profile",
+            "type": "integer",
+            "editor": "number",
+            "description": "TikTok's public embed exposes the newest 12 videos at most.",
+            "default": 12,
+            "minimum": 1,
+            "maximum": 12
+        },
+        "flattenVideos": {
+            "title": "One dataset row per video",
+            "type": "boolean",
+            "description": "Off: one row per profile with a \"videos\" array. On: one profile row plus one row per video (type = \"video\"), easier to export to CSV.",
+            "default": false
+        },
+        "apiKey": {
+            "title": "Scrape Everything API key",
+            "type": "string",
+            "editor": "textfield",
+            "isSecret": true,
+            "description": "Your key from https://scrapeeverything.com/?utm_source=apify&utm_medium=actor (new accounts get 100 free credits). Stored encrypted. Leave empty only if the SCRAPEEVERYTHING_API_KEY environment variable is set on the actor."
+        },
+        "maxConcurrency": {
+            "title": "Max concurrency",
+            "type": "integer",
+            "editor": "number",
+            "description": "How many API requests run in parallel. The free plan allows 5 concurrent requests, paid plans 20.",
+            "default": 3,
+            "minimum": 1,
+            "maximum": 20
+        },
+        "cacheDays": {
+            "title": "Accept cached data up to (days)",
+            "type": "integer",
+            "editor": "number",
+            "description": "If set (1-14), the API may return a result you already fetched within this many days. Cache hits cost 0 credits. 0 = always fetch live.",
+            "default": 0,
+            "minimum": 0,
+            "maximum": 14
+        }
+    },
+    "required": [
+        "usernames"
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "name": "scrapeeverything-apify-actors",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "description": "Apify actor sources powered by the Scrape Everything API (Instagram, TikTok, YouTube).",
+    "license": "MIT",
+    "engines": {
+        "node": ">=20"
+    },
+    "scripts": {
+        "install:all": "npm install --prefix actors/instagram-profile-scraper && npm install --prefix actors/tiktok-profile-videos-scraper && npm install --prefix actors/youtube-transcript-scraper",
+        "sync": "node scripts/sync-shared.mjs",
+        "sync:check": "node scripts/sync-shared.mjs --check",
+        "test": "npm run sync:check && node --test test/client.test.mjs test/actors.test.mjs && npm test --prefix actors/instagram-profile-scraper && npm test --prefix actors/tiktok-profile-videos-scraper && npm test --prefix actors/youtube-transcript-scraper",
+        "mock": "node test/mock-server.mjs 4010",
+        "local:instagram": "node scripts/run-local.mjs instagram-profile-scraper",
+        "local:tiktok": "node scripts/run-local.mjs tiktok-profile-videos-scraper",
+        "local:youtube": "node scripts/run-local.mjs youtube-transcript-scraper"
+    }
+}

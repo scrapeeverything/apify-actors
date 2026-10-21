@@ -1,0 +1,115 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Profiles",
+            "transformation": {
+                "fields": [
+                    "profile_image_url",
+                    "type",
+                    "username",
+                    "full_name",
+                    "is_verified",
+                    "follower_count",
+                    "like_count",
+                    "video_count",
+                    "avg_play_count",
+                    "region",
+                    "biography"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "profile_image_url": {
+                        "label": "Avatar",
+                        "format": "image"
+                    },
+                    "type": {
+                        "label": "Row type",
+                        "format": "text"
+                    },
+                    "username": {
+                        "label": "Username",
+                        "format": "text"
+                    },
+                    "full_name": {
+                        "label": "Name",
+                        "format": "text"
+                    },
+                    "is_verified": {
+                        "label": "Verified",
+                        "format": "boolean"
+                    },
+                    "follower_count": {
+                        "label": "Followers",
+                        "format": "number"
+                    },
+                    "like_count": {
+                        "label": "Likes",
+                        "format": "number"
+                    },
+                    "video_count": {
+                        "label": "Videos",
+                        "format": "number"
+                    },
+                    "avg_play_count": {
+                        "label": "Avg plays (recent)",
+                        "format": "number"
+                    },
+                    "region": {
+                        "label": "Region",
+                        "format": "text"
+                    },
+                    "biography": {
+                        "label": "Bio",
+                        "format": "text"
+                    }
+                }
+            }
+        },
+        "videos": {
+            "title": "Videos (flattened rows)",
+            "transformation": {
+                "fields": [
+                    "cover_url",
+                    "profile_username",
+                    "position",
+                    "description",
+                    "play_count",
+                    "link"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "cover_url": {
+                        "label": "Cover",
+                        "format": "image"
+                    },
+                    "profile_username": {
+                        "label": "Profile",
+                        "format": "text"
+                    },
+                    "position": {
+                        "label": "#",
+                        "format": "number"
+                    },
+                    "description": {
+                        "label": "Caption",
+                        "format": "text"
+                    },
+                    "play_count": {
+                        "label": "Plays",
+                        "format": "number"
+                    },
+                    "link": {
+                        "label": "Link",
+                        "format": "link"
+                    }
+                }
+            }
+        }
+    }
+}

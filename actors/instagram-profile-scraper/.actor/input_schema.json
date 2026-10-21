@@ -1,0 +1,60 @@
+{
+    "title": "Instagram Profile Scraper input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "usernames": {
+            "title": "Instagram usernames or profile URLs",
+            "type": "array",
+            "editor": "stringList",
+            "description": "One per line. Accepts a username (nasa), an @handle (@nasa) or a profile URL (https://www.instagram.com/nasa/).",
+            "prefill": [
+                "nasa",
+                "natgeo"
+            ]
+        },
+        "includePosts": {
+            "title": "Include recent posts",
+            "type": "boolean",
+            "description": "Also return the newest posts with like/comment counts and an engagement rate. Uses instagram.photos (2 credits per profile) instead of instagram.profile (1 credit).",
+            "default": false
+        },
+        "postsLimit": {
+            "title": "Posts per profile",
+            "type": "integer",
+            "editor": "number",
+            "description": "Only used when \"Include recent posts\" is on. Up to 60.",
+            "default": 12,
+            "minimum": 1,
+            "maximum": 60
+        },
+        "apiKey": {
+            "title": "Scrape Everything API key",
+            "type": "string",
+            "editor": "textfield",
+            "isSecret": true,
+            "description": "Your key from https://scrapeeverything.com/?utm_source=apify&utm_medium=actor (new accounts get 100 free credits). Stored encrypted. Leave empty only if the SCRAPEEVERYTHING_API_KEY environment variable is set on the actor."
+        },
+        "maxConcurrency": {
+            "title": "Max concurrency",
+            "type": "integer",
+            "editor": "number",
+            "description": "How many API requests run in parallel. The free plan allows 5 concurrent requests, paid plans 20.",
+            "default": 3,
+            "minimum": 1,
+            "maximum": 20
+        },
+        "cacheDays": {
+            "title": "Accept cached data up to (days)",
+            "type": "integer",
+            "editor": "number",
+            "description": "If set (1-14), the API may return a result you already fetched within this many days. Cache hits cost 0 credits. 0 = always fetch live.",
+            "default": 0,
+            "minimum": 0,
+            "maximum": 14
+        }
+    },
+    "required": [
+        "usernames"
+    ]
+}

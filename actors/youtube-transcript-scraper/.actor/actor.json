@@ -1,0 +1,14 @@
+{
+    "actorSpecification": 1,
+    "name": "youtube-transcript-scraper-scrapeeverything",
+    "title": "YouTube Transcript Scraper",
+    "description": "Get YouTube video transcripts (captions) as plain text and timed segments, with language selection and optional video details (title, channel, views, likes). Powered by the Scrape Everything API.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile",
+    "readme": "../README.md"
+}

@@ -1,0 +1,14 @@
+{
+    "actorSpecification": 1,
+    "name": "instagram-profile-scraper-scrapeeverything",
+    "title": "Instagram Profile Scraper (Scrape Everything API)",
+    "description": "Scrape public Instagram profiles: bio, followers, following, post count, verification and business flags, plus optional recent posts with likes, comments and engagement rate. Powered by the Scrape Everything API.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile",
+    "readme": "../README.md"
+}

@@ -1,0 +1,14 @@
+{
+    "actorSpecification": 1,
+    "name": "tiktok-profile-videos-scraper-scrapeeverything",
+    "title": "TikTok Profile & Videos Scraper",
+    "description": "Scrape public TikTok profiles (followers, likes, video count, bio, region) and their newest videos with play counts. Nested or one row per video. Powered by the Scrape Everything API.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile",
+    "readme": "../README.md"
+}

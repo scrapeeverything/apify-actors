@@ -1,0 +1,62 @@
+{
+    "title": "YouTube Transcript Scraper input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "videos": {
+            "title": "YouTube video URLs or IDs",
+            "type": "array",
+            "editor": "stringList",
+            "description": "One per line. Accepts watch, youtu.be, shorts, live and embed links or a bare 11-character video ID.",
+            "prefill": [
+                "https://www.youtube.com/watch?v=jNQXAC9IVRw"
+            ]
+        },
+        "lang": {
+            "title": "Caption language",
+            "type": "string",
+            "editor": "textfield",
+            "description": "Optional language code such as en, de, pt-BR or es-419. Empty = the video's original language."
+        },
+        "includeSegments": {
+            "title": "Include timed segments",
+            "type": "boolean",
+            "description": "Keep the per-line segments with start times. Turn off if you only need the plain text.",
+            "default": true
+        },
+        "includeVideoDetails": {
+            "title": "Include video details",
+            "type": "boolean",
+            "description": "Also fetch title, channel, publish date, views and likes (youtube.video, +1 credit per video).",
+            "default": false
+        },
+        "apiKey": {
+            "title": "Scrape Everything API key",
+            "type": "string",
+            "editor": "textfield",
+            "isSecret": true,
+            "description": "Your key from https://scrapeeverything.com/?utm_source=apify&utm_medium=actor (new accounts get 100 free credits). Stored encrypted. Leave empty only if the SCRAPEEVERYTHING_API_KEY environment variable is set on the actor."
+        },
+        "maxConcurrency": {
+            "title": "Max concurrency",
+            "type": "integer",
+            "editor": "number",
+            "description": "How many API requests run in parallel. The free plan allows 5 concurrent requests, paid plans 20.",
+            "default": 3,
+            "minimum": 1,
+            "maximum": 20
+        },
+        "cacheDays": {
+            "title": "Accept cached data up to (days)",
+            "type": "integer",
+            "editor": "number",
+            "description": "If set (1-14), the API may return a result you already fetched within this many days. Cache hits cost 0 credits. 0 = always fetch live.",
+            "default": 0,
+            "minimum": 0,
+            "maximum": 14
+        }
+    },
+    "required": [
+        "videos"
+    ]
+}
