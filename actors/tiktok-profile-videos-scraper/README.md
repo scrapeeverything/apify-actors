@@ -31,7 +31,7 @@ Without a key the run fails at once with these steps and nothing is charged.
 | `cacheDays` | integer | `0` | 1-14 lets the API reuse a recent result for 0 credits |
 
 ```json
-{ "usernames": ["khaby.lame", "@charlidamelio"], "includeVideos": true, "videosLimit": 12, "apiKey": "se_live_..." }
+{ "usernames": ["khaby.lame", "@charlidamelio"], "includeVideos": true, "videosLimit": 12, "apiKey": "ssk_live_..." }
 ```
 
 ## Output
@@ -98,3 +98,7 @@ Pricing on Apify: this actor uses pay-per-result. You pay Apify per dataset row 
 ## Responsible use
 
 This actor reads public data only. Respect TikTok's terms and the privacy laws that apply to you, and do not use it to harvest personal data.
+
+## About Scrape Everything
+
+Scrape Everything is a REST API for public social media data. Send a username, link or ID and get clean, typed JSON from Instagram, TikTok, X, YouTube, Facebook, Telegram, Spotify, Pinterest and Twitch. Pay per successful request with prepaid credits that never expire. New accounts start with 100 free credits. https://scrapeeverything.com

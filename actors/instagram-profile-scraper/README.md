@@ -35,7 +35,7 @@ If the key is missing, the run fails at once with these instructions and spends 
   "usernames": ["nasa", "@natgeo", "https://www.instagram.com/spacex/"],
   "includePosts": true,
   "postsLimit": 12,
-  "apiKey": "se_live_..."
+  "apiKey": "ssk_live_..."
 }
 ```
 
@@ -110,4 +110,8 @@ This actor reads **public** data only. Do not use it to collect personal data ab
 
 - TikTok Profile & Videos Scraper
 - YouTube Transcript Scraper
-- The full API covers 40 endpoints on 9 platforms (Instagram, X, TikTok, YouTube, Facebook, Telegram, Spotify, Pinterest, Twitch): https://scrapeeverything.com/?utm_source=apify&utm_medium=actor
+- The full API covers 40 endpoints on 9 platforms (Instagram, TikTok, X, YouTube, Facebook, Telegram, Spotify, Pinterest and Twitch): https://scrapeeverything.com/?utm_source=apify&utm_medium=actor
+
+## About Scrape Everything
+
+Scrape Everything is a REST API for public social media data. Send a username, link or ID and get clean, typed JSON from Instagram, TikTok, X, YouTube, Facebook, Telegram, Spotify, Pinterest and Twitch. Pay per successful request with prepaid credits that never expire. New accounts start with 100 free credits. https://scrapeeverything.com

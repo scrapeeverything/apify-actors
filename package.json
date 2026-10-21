@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "type": "module",
-    "description": "Apify actor sources powered by the Scrape Everything API (Instagram, TikTok, YouTube).",
+    "description": "Apify actors powered by Scrape Everything. Public social data as clean JSON from Instagram, TikTok, X, YouTube, Facebook, Telegram, Spotify, Pinterest and Twitch.",
     "license": "MIT",
     "engines": {
         "node": ">=20"

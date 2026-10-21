@@ -1,6 +1,8 @@
 # Scrape Everything actors for Apify
 
-This repo holds the source for three [Apify](https://apify.com) actors powered by the [Scrape Everything API](https://scrapeeverything.com/?utm_source=github&utm_medium=apify):
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+Public social data as clean JSON. This repo holds the source for three [Apify](https://apify.com) actors powered by the [Scrape Everything API](https://scrapeeverything.com/?utm_source=github&utm_medium=apify):
 
 | Actor | Folder | API endpoints | Credits per input |
 | --- | --- | --- | --- |
@@ -38,7 +40,7 @@ npm install
 npm run install:all      # installs the apify SDK in each actor
 npm test                 # sync check + client tests + e2e actor runs on the mock API + actor unit tests
 npm run local:instagram  # also local:tiktok, local:youtube; prints the dataset
-SCRAPEEVERYTHING_API_KEY=se_... node scripts/run-local.mjs youtube-transcript-scraper --live
+SCRAPEEVERYTHING_API_KEY=ssk_live_... node scripts/run-local.mjs youtube-transcript-scraper --live
 ```
 
 Environment overrides: `SCRAPEEVERYTHING_API_KEY` (used when the `apiKey` input is empty), `SCRAPEEVERYTHING_BASE_URL` (default `https://api.scrapeeverything.com`) and `SCRAPEEVERYTHING_RETRY_BASE_MS`.
@@ -60,6 +62,10 @@ Environment overrides: `SCRAPEEVERYTHING_API_KEY` (used when the `apiKey` input 
    - Credits per result: Instagram 1 (2 with posts), TikTok 1-2, YouTube 1-2. Flat TikTok mode makes up to 13 rows per profile, so tell users that, or price per profile row only by suggesting `flattenVideos: false`.
    - Only successful results are pushed to the dataset. Failed inputs go to the `ERRORS` key-value store record (`[{input, error:{code,message,request_id}}]`), so users never pay per-result for failures. A run where every input fails is marked as failed.
 6. **Make it public** and add the Store links to scrapeeverything.com, the docs, and the `scrapeeverything/skills` README.
+
+## About Scrape Everything
+
+Scrape Everything is a REST API for public social media data. Send a username, link or ID and get clean, typed JSON from Instagram, TikTok, X, YouTube, Facebook, Telegram, Spotify, Pinterest and Twitch. Pay per successful request with prepaid credits that never expire. New accounts start with 100 free credits. https://scrapeeverything.com
 
 ## License
 

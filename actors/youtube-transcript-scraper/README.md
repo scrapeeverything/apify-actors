@@ -36,7 +36,7 @@ If the key is missing, the run stops at once with these steps and nothing is cha
   "videos": ["https://www.youtube.com/watch?v=jNQXAC9IVRw", "dQw4w9WgXcQ"],
   "lang": "en",
   "includeVideoDetails": true,
-  "apiKey": "se_live_..."
+  "apiKey": "ssk_live_..."
 }
 ```
 
@@ -95,3 +95,7 @@ Pricing on Apify: this actor uses pay-per-result. You pay Apify per transcript r
 ## Responsible use
 
 Transcripts are public captions. Respect creators' copyright when you republish them and follow YouTube's terms.
+
+## About Scrape Everything
+
+Scrape Everything is a REST API for public social media data. Send a username, link or ID and get clean, typed JSON from Instagram, TikTok, X, YouTube, Facebook, Telegram, Spotify, Pinterest and Twitch. Pay per successful request with prepaid credits that never expire. New accounts start with 100 free credits. https://scrapeeverything.com
